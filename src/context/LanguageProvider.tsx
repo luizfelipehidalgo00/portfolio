@@ -10,10 +10,17 @@ import {
 } from "react";
 import { copy, type Lang } from "@/data/content";
 
+// Converte recursivamente os textos literais (ex: "Skip to content") em string comum
+type DeepString<T> = {
+  [K in keyof T]: T[K] extends object ? DeepString<T[K]> : string;
+};
+
+export type TranslationType = DeepString<(typeof copy)["en"]>;
+
 type Ctx = {
   lang: Lang;
   toggle: () => void;
-  t: (typeof copy)[Lang];
+  t: TranslationType;
 };
 
 const LanguageContext = createContext<Ctx | null>(null);
@@ -35,7 +42,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     () => ({
       lang,
       toggle: () => setLang((prev) => (prev === "en" ? "pt" : "en")),
-      t: copy[lang],
+      t: copy[lang] as unknown as TranslationType,
     }),
     [lang],
   );
