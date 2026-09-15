@@ -13,7 +13,7 @@ import { copy, type Lang } from "@/data/content";
 type Ctx = {
   lang: Lang;
   toggle: () => void;
-  t: (typeof copy)["en"];
+  t: (typeof copy)[Lang];
 };
 
 const LanguageContext = createContext<Ctx | null>(null);
