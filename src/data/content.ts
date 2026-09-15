@@ -2,11 +2,11 @@ export type Lang = "en" | "pt";
 
 export const profile = {
   name: "Luiz Felipe Hidalgo De Lima",
-  email: "luizhidalgo00@gmail.com",
+  email: "luizfelipehidalgo00@gmail.com",
   phone: "+55 11 99000-2715",
   phoneHref: "tel:+5511990002715",
   github: "https://github.com/luizfelipehidalgo00",
-  linkedin: "https://www.linkedin.com/in/luizfelipehidalgo",
+  linkedin: "www.linkedin.com/in/luiz-felipe-hidalgo",
   location: { en: "São Paulo, Brazil", pt: "São Paulo, Brasil" },
 };
 
@@ -133,16 +133,6 @@ export const experience = {
         "Backoffice: infraestrutura web, chamados operacionais e acompanhamento de campanhas.",
         "Analisei tráfego e campanhas digitais com foco em KPIs (alcance, conversão, custo).",
         "Transformei anotações operacionais em relatórios úteis para o comercial.",
-      ],
-    },
-    {
-      role: "Suporte a operações e processos",
-      company: "Steck Elétrica · Guararema, SP",
-      period: "Mar 2024 — Fev 2026",
-      bullets: [
-        "Acompanhei parâmetros de processo, inspeção visual/dimensional e laudos.",
-        "Automatizei rotinas de inventário em Python, reduzindo trabalho manual em planilha.",
-        "Pratiquei 5S, trabalho em equipe e resolução de problemas — skills que levo para dados e backoffice.",
       ],
     },
   ],
